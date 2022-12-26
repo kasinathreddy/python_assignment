@@ -25,6 +25,8 @@
 - Transactions table will have all the transactions data
   - tid is a primary key which is a integer(serial)
   - txn_date is a column where transaction date is stored in YYYY-MM-DD format
+  - rrn is a column where we are storing RRN numbers which is a foreign key
+    - The reason we cannot use a composite key and stored everything in one table is with date,rnn,ifsc is if a same person does second transaction on same day all the 3 fields will be same and it will create conflict
   - ifsc_code is a column where ifsc_code of that particular bank transaction is stored
   - bank_name is a column where bank name of that transaction is stored
   - account_holder is a column where we store name of the customer
